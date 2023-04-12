@@ -1,0 +1,33 @@
+{
+  "name": "discord_bot",
+  "version": "1.0.0",
+  "description": "Discord bot to implement chat-gpt inside a server",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DaniFdz/discord_chat_bot.git"
+  },
+  "keywords": [
+    "chat",
+    "gpt",
+    "gpt3",
+    "chat-gpt",
+    "discord",
+    "bot"
+  ],
+  "author": "DaniFdz",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DaniFdz/discord_chat_bot/issues"
+  },
+  "homepage": "https://github.com/DaniFdz/discord_chat_bot#readme",
+  "dependencies": {
+    "discord.js": "^14.9.0",
+    "dotenv": "^16.0.3",
+    "openai": "^3.2.1"
+  }
+}
