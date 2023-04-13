@@ -21,11 +21,12 @@ This command will install all the required packages mentioned in the `package.js
 
 ### Setting up the Configuration File
 
-You need to create an `.env` file with your Discord bot token and OpenAI API key.
+You need to create an `.env` file with the next enviroment variables.
 
 ```.env
 DISCORD_TOKEN=YOUR_DISCORD_TOKEN_HERE
 OPENAI_API_KEY=YOUR_OPENAI_API_KEY_HERE
+BOT_ID=BOT_ID_HERE
 ```
 
 ### Running the Bot
