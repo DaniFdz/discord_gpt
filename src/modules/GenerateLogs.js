@@ -7,11 +7,10 @@ export const generateLogs = (prev_messages, author_id) => {
     let mode = 'friendly';
     let conversation_log = [{ role: 'system', content: `You are a ${mode} robot` }];
 
-    prev_messages = prev_messages.reverse().filter((m) => 
-        m.author.id === BOT_ID || m.author.id === author_id
-    )
+    
+    prev_messages.reverse().forEach((m) => {
+        if(m.author.id !== BOT_ID && m.author.id !== author_id) return;
 
-    prev_messages.forEach((m) => {
         if(m.content.startsWith('!')){
             if(m.content.startsWith('!mode')){
                 mode = m.content.split(' ')[1];
@@ -24,8 +23,8 @@ export const generateLogs = (prev_messages, author_id) => {
             }
         }
         else{
-            if(!m.author.id === BOT_ID ||
-            !m.content === "Sorry, I'm having trouble connecting to the server right now. Please try again later."){
+            if(m.author.id !== BOT_ID ||
+                m.content !== "Sorry, I'm having trouble connecting to the server right now. Please try again later."){
                 conversation_log.push({
                     role: m.author.id === BOT_ID ? 'bot' : 'user',
                     content: m.content
